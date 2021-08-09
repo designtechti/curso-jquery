@@ -20,4 +20,4 @@ jQuery é uma biblioteca do Javascript que produz efeitos e animações por meio
 #### Tecnologias utilizadas
 <br> 
 
-![HTML5](images/html.png)![Javascript](images/js.png) <br>
+![HTML5](images/html.png)![Javascript](images/js.png) <img src="images/jquery.svg" alt="JQuery" width="61px"/> <br>
