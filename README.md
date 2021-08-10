@@ -10,7 +10,10 @@ jQuery é uma biblioteca do Javascript que produz efeitos e animações por meio
 <br>
 
 ## :memo: :dart: Grade Curricular
-:heavy_check_mark: 
+:heavy_check_mark: Utilizando jQuery & AJAX
+- Entender o que é o AJAX
+- Aprender à utilizar o AJAX
+- Desenvolver páginas c/ jQuery & AJAX
 
 :heavy_check_mark: 
 
