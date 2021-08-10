@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="PT-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso jQuery & AJAX | Digital Innovation One</title>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curso jQuery & AJAX | Digital Innovation One</title>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <button type="button">Clique aqui</button>
+	<input id="cep" placeholder="Digite seu CEP">
+	<button type="button" onclick="consultaCep()">Consultar</button>
+	<br>
+	<strong><label for="logradouro">Logradouro:</label></strong>
+		<p id="logradouro"></p>
+	<strong><label for="bairro">Bairro: </label></strong>
+		<p id="bairro"></p>
+	<strong><label for="localidade">Localidade: </label></strong>
+		<p id="localidade"></p>
+	<strong><label for="uf">UF: </label></strong>
+		<p id="uf"></p>
+
 </body>
 </html>
