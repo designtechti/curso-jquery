@@ -53,19 +53,26 @@ function consultaCep() {
 function consultaCep() {
 	var cep = document.getElementById("cep").value;
 	var url = "https://viacep.com.br/ws/"+ cep + "/json/";
-	
+					
 	// faz uma requisição AJAX utilizando o Webservice dos correios e ibge
 	$.ajax({
 		url: url, 
 		type: "GET", 
 		success: function(response){
 			console.log(response);
-
+				
 			// exibe as informações no browser
-			$("#logradouro").html('<strong><label for="logradouro">Logradouro: &nbsp;</label></strong>' + response.logradouro);
-			$("#bairro").html('<strong><label for="bairro">Bairro: &nbsp;</label></strong>' + response.bairro);
-			$("#localidade").html('<strong><label for="localidade">Localidade: &nbsp;</label></strong>' + response.localidade);
-			$("#uf").html('<strong><label for="uf">UF: &nbsp;</label></strong>' +response.uf);
+			$("#logradouro").html(response.logradouro);
+			$("#bairro").html(response.bairro);
+			$("#localidade").html(response.localidade);
+			$("#uf").html(response.uf);
+			$("#numeroCEP").html("Informações do CEP: " + response.cep);
+			$(".cep").show();		
 		}
 	})
 }
+
+// oculta o conteudo
+$(function() {
+	$(".cep").hide();
+});

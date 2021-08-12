@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Curso jQuery & AJAX | Digital Innovation One</title>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	<title>Curso jQuery & AJAX | Digital Innovation One</title>	
 	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,15 +14,34 @@
 		<a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo" width="64"> Consulta CEP</a>
 		<sup  style="color: rgba(194, 194, 194, 0.5);">by <a style="color: rgba(194, 194, 194, 0.5);" href="https://designtechti.github.io/portifolio/">designtechti</a> &nbsp;</sup>
 		<div class="d-flex">
-			<input class="form-control me-2" type="search" placeholder="Digite seu CEP" aria-label="Search" id="cep">
+			<input class="form-control me-2" type="search" placeholder="Digite seu CEP" aria-label="Search" id="cep" aria-required="true">
 			<button class="btn btn-outline-success" onclick="consultaCep()">Consultar</button>
 		</div>
 	</nav>
-	<div style="width: 50%; margin: 30px auto;">
-		<p id="logradouro"></p>
-		<p id="bairro"></p>
-		<p id="localidade"></p>
-		<p id="uf"></p>
+	<div class="container cep" style="width: 50%; margin: 30px auto;">
+		<div class="row">
+			<h3 id="numeroCEP">Informações do CEP</h3>
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<td>Logradouro</td>
+						<td id="logradouro"></td>
+					</tr>
+					<tr>
+						<td>Bairro</td>
+						<td id="bairro"></td>
+					</tr>
+					<tr>
+						<td>Localidade</td>
+						<td id="localidade"></td>
+					</tr>
+					<tr>
+						<td>UF</td>
+						<td id="uf"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </body>
 </html>
