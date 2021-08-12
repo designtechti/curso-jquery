@@ -25,6 +25,7 @@ function consultaCep() {
 
 /* Sem usar a biblioteca jquery */
 
+/*
 // Cria uma função para consultar endereços por CEP juntamente com o AJAX
 function consultaCep() {
 	var cep = document.getElementById("cep").value;
@@ -38,13 +39,13 @@ function consultaCep() {
 			console.log(response);
 
 			// exibe as informações no browser
-			//document.getElementById("logradouro").innerHTML = response.logradouro;
-			//document.getElementById("bairro").innerHTML = response.bairro;
-			//document.getElementById("localidade").innerHTML = response.localidade;
-			//document.getElementById("uf").innerHTML = response.uf;
+			document.getElementById("logradouro").innerHTML = response.logradouro;
+			document.getElementById("bairro").innerHTML = response.bairro;
+			document.getElementById("localidade").innerHTML = response.localidade;
+			document.getElementById("uf").innerHTML = response.uf;
 		}
 	})
-}
+} */
 
 /* Utilizando a biblioteca jquery */
 
@@ -61,10 +62,10 @@ function consultaCep() {
 			console.log(response);
 
 			// exibe as informações no browser
-			$("#logradouro").html(response.logradouro);
-			$("#bairro").html(response.bairro);
-			$("#localidade").html(response.localidade);
-			$("#uf").html(response.uf);
+			$("#logradouro").html('<strong><label for="logradouro">Logradouro: &nbsp;</label></strong>' + response.logradouro);
+			$("#bairro").html('<strong><label for="bairro">Bairro: &nbsp;</label></strong>' + response.bairro);
+			$("#localidade").html('<strong><label for="localidade">Localidade: &nbsp;</label></strong>' + response.localidade);
+			$("#uf").html('<strong><label for="uf">UF: &nbsp;</label></strong>' +response.uf);
 		}
 	})
 }

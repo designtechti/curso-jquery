@@ -7,18 +7,22 @@
 	<title>Curso jQuery & AJAX | Digital Innovation One</title>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-	<input id="cep" placeholder="Digite seu CEP">
-	<button type="button" onclick="consultaCep()">Consultar</button>
-	<br>
-	<strong><label for="logradouro">Logradouro:</label></strong>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo" width="64"> Consulta CEP</a>
+		<sup  style="color: rgba(194, 194, 194, 0.5);">by <a style="color: rgba(194, 194, 194, 0.5);" href="https://designtechti.github.io/portifolio/">designtechti</a> &nbsp;</sup>
+		<div class="d-flex">
+			<input class="form-control me-2" type="search" placeholder="Digite seu CEP" aria-label="Search" id="cep">
+			<button class="btn btn-outline-success" onclick="consultaCep()">Consultar</button>
+		</div>
+	</nav>
+	<div style="width: 50%; margin: 30px auto;">
 		<p id="logradouro"></p>
-	<strong><label for="bairro">Bairro: </label></strong>
 		<p id="bairro"></p>
-	<strong><label for="localidade">Localidade: </label></strong>
 		<p id="localidade"></p>
-	<strong><label for="uf">UF: </label></strong>
 		<p id="uf"></p>
+	</div>
 </body>
 </html>
