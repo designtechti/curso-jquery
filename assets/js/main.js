@@ -51,6 +51,7 @@ function consultaCep() {
 
 // Cria uma função para consultar endereços por CEP juntamente com o AJAX
 function consultaCep() {
+	$(".barra-progresso").show();
 	var cep = document.getElementById("cep").value;
 	var url = "https://viacep.com.br/ws/"+ cep + "/json/";
 					
@@ -67,7 +68,8 @@ function consultaCep() {
 			$("#localidade").html(response.localidade);
 			$("#uf").html(response.uf);
 			$("#numeroCEP").html("Informações do CEP: " + response.cep);
-			$(".cep").show();		
+			$(".cep").show();
+			$(".barra-progresso").hide();	
 		}
 	})
 }
@@ -75,4 +77,5 @@ function consultaCep() {
 // oculta o conteudo
 $(function() {
 	$(".cep").hide();
+	$(".barra-progresso").hide();
 });
